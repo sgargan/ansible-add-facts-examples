@@ -1,0 +1,19 @@
+
+# Illustrates how added facts might be used in a template 
+{% for role_key in some_aggregate %}
+Facts added for Role: {{role_key}} 
+{% set role_facts = some_aggregate[role_key] %}
+{% for fact_key in role_facts %}
+{% set facts = role_facts[fact_key] %}
+  {{fact_key}} contains {{facts|length}} facts.
+{% for fact in facts %}
+{%- if 'name' in fact %} 
+    - Json fact: name: {{fact['name']}} value: {{fact['value']}}
+{%- else %}
+    - Plain ol' fact: {{fact}}
+{% endif -%}
+{% endfor %}
+
+{% endfor %}
+
+{% endfor %}

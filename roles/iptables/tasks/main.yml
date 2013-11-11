@@ -1,0 +1,3 @@
+---
+  - name: generate iptables config from ports exposed by each role
+    template: src=iptables.conf dest=/etc/iptables.conf

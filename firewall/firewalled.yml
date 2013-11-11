@@ -1,0 +1,9 @@
+---
+  - hosts: all
+    user: vagrant
+    sudo: true
+
+    roles: 
+      - roles/jetty
+      - roles/cassandra
+      - roles/iptables

@@ -1,0 +1,8 @@
+---
+  # Tasks that install & configure jetty
+
+  - name: Add jetty ports to the exposed list
+    add_facts: aggregate_key="exposed_ports" role_key="jetty" ports="{{item}}"
+    with_items:
+      - 8080
+      - 1099

@@ -1,0 +1,6 @@
+---
+  # Tasks that install & configure cassandra
+
+  - name: Add cassandra ports to the exposed list
+    add_facts: aggregate_key="exposed_ports" role_key="cassandra" ports="{{item}}"
+    with_items: cassandra_ports

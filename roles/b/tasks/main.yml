@@ -1,0 +1,11 @@
+---
+
+  - name: add facts to some_aggregate variable
+    add_facts: aggregate_key="some_aggregate" role_key="b" b_facts="a_vital_b_fact"
+
+  - name: add more facts to some_aggregate variable
+    add_facts: aggregate_key="some_aggregate" role_key="b" more_b_facts="{{item}}"
+    with_items:
+      - yet_another_b_fact_1
+      - yet_another_b_fact_2
+      - yet_another_b_fact_3

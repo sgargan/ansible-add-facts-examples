@@ -1,0 +1,4 @@
+---
+  dependencies:
+    - roles/b
+    - roles/c

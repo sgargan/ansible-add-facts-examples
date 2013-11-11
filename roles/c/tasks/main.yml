@@ -1,0 +1,4 @@
+---
+  - name: add facts to some_aggregate variable
+    add_facts: aggregate_key="some_aggregate" role_key="c" c_facts="{{item}}"
+    with_items: facts_for_role_c

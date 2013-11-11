@@ -1,0 +1,4 @@
+---
+  - name: generate config from agregate facts
+    template: src=aggregating.template dest=/tmp/aggregated
+
